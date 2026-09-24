@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://varadwatersolutions.com/sitemap.xml

@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ivory: #FAF9F4;
+    --pure-white: #FFFFFF;
+    --cool-white: #F5F8FA;
+    --pale-blue: #E8F2F7;
+    --soft-blue: #BFDCEB;
+    --primary-blue: #256B8A;
+    --deep-ocean: #123B52;
+    --ink: #17252D;
+    --body-text: #53666F;
+    --water-accent: #35B8D0;
+    --border: #DCE7EC;
+  }
+
+  body {
+    background-color: #FAF9F4;
+    color: #17252D;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Clean light scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF9F4;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #BFDCEB;
+    border-radius: 4px;
+    border: 2px solid #FAF9F4;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #256B8A;
+  }
+}
+
+@layer utilities {
+  .bg-subtle-water {
+    background: radial-gradient(circle at 50% 0%, rgba(191, 220, 235, 0.35) 0%, rgba(232, 242, 247, 0.2) 45%, rgba(250, 249, 244, 0) 75%);
+  }
+  .bg-radial-soft {
+    background: radial-gradient(circle at 85% 15%, rgba(191, 220, 235, 0.4) 0%, rgba(250, 249, 244, 0) 65%);
+  }
+  .glass-light {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid #DCE7EC;
+  }
+}
+
+/* Reduced motion preference support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
